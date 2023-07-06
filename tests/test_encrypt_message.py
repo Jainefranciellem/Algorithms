@@ -7,6 +7,8 @@ def test_encrypt_message():
 
     assert encrypt_message("Hello, world!", 6) == "!dlrow _,olleH"
 
+    assert encrypt_message("Hello, world!", -3) == '!dlrow ,olleH'
+
     with pytest.raises(TypeError):
         encrypt_message("Hello, world!", "invalid")
 
